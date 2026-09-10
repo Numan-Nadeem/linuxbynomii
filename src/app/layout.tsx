@@ -29,7 +29,13 @@ export const metadata: Metadata = {
     "Industrial telemetry interface for Linux System Administration course notes. Terminal operations, file systems, users & permissions, processes, services, storage, network, SELinux. 8 sections / 44 modules / 200+ commands.",
   keywords: ["Linux", "System Administration", "RHCSA", "notes", "terminal", "systemd", "SELinux", "LVM"],
   icons: {
-    icon: "/media/favicon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 

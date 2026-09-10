@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- LX-09 // CRT substrate -->
+  <rect width="512" height="512" fill="#0A0A0A"/>
+  <!-- industrial panel frame -->
+  <rect x="8" y="8" width="496" height="496" fill="none" stroke="#262626" stroke-width="12"/>
+  <!-- white phosphor prompt chevron -->
+  <path d="M140 130 L256 256 L140 382" fill="none" stroke="#EAEAEA" stroke-width="56" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- hazard-red block cursor -->
+  <rect x="308" y="328" width="92" height="56" fill="#E61919"/>
+</svg>
