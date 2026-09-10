@@ -1,0 +1,740 @@
+[Heading 2] Section 1: Introduction to Linux
+[normal] Open Source Operating System that is widely used and provide following features
+[normal] Reliable
+[normal] Free of Cost (Open-Source)
+[normal] Software Management
+[normal] Security
+[normal] Performance
+[normal] Freedom
+[normal] Customization
+[Heading 2] Section 3: Understand & Use of Essential Tools
+[Heading 3] Terminal
+[normal] The terminal allows the user to perform different system operations using the command line interface. The terminal follows this format: username@machine_name Directory $/#. ~ marks the home directory of logged in users. $ marks non-root user and # marks the root user
+[normal] $ date -> displays current date & time
+[normal] $ man command -> manual page of a command listing format and acceptable parameters
+[normal] $ uptime -> shows uptime of the system along with logged in user
+[normal] $ who -> display the details of logged in users
+[normal] $ pwd -> shows current working directory
+[Heading 3] Linux File System Hierarchy
+>>> IMAGE: image7.png
+[normal] / -> root directory; root of the file system
+[normal] /usr -> Installed applications on the system, shared libraries
+[normal] /usr/bin -> Binary files/Commands used by end users on the linux system (system wide binaries) e.g. cd, mv, etc.
+[normal] /usr/sbin -> Binary files/ Commands only used by the administrator on the system directory
+[normal] /usr/local -> Path Installed applications
+[normal] /usr/tmp
+[normal] /etc -> Contains configuration files of the system and applications
+[normal] /var -> Files whose size is expected to increase by time such log files; Continuously changing files
+[normal] /var/tmp -> same as /tmp but the files gets deleted after 30 days
+[normal] /home -> stores home directory of each user; when a user is created, a directory with the username of the user is created inside this directory
+[normal] /root -> home directory of the root user
+[normal] /tmp -> temporary files used by the system or applications; these files get deleted after 10 days automatically
+[normal] /dev -> has all devices files used by system to access the hardware such as hard disk
+[normal] /boot -> contains boot loader files and kernels
+[normal] /bin -> contains executable files that are part of the core operating system
+[normal] /usr/share/doc -> documentation of applications on the system
+[Heading 3] File & Directories
+[normal] $ touch -> Creates empty files on the path specified
+[normal] $ touch file.txt -> creates a file with name “file.txt”
+[normal] can also be used to create multiple files in a single by providing space separated path to each file name or comma separated list in side curly brackets ({file1.txt,file2.txt })
+[normal] $ mkdir -> used to create empty directory
+[normal] $ mkdir test -> creates a directory with name “test”
+[normal] can also be used to create multiple files in a single by providing space separated path to each file name
+[normal] use mkdir -p to create nested directories e.g. mkdir -p /dir1/dir2 will create a dir1 and dir2 inside dir1
+[Heading 3] Linux Shell Basics
+[normal] $ whoami -> logged in user
+[normal] $ hostname -> Machine Name
+[normal] $ pwd -> current working directory
+[normal] $ clear -> clears screen
+[normal] $ ls -> shows files and directories
+[normal] $ ls -l -> Long Listing Format  (shows more information about the files)
+[normal] $ ls -a -> list all files and directories along with hidden files & directores (starting with .)
+[normal] $ cd -> move between directories;
+[normal] $ cd /path/to/directory
+[normal] Can use relative or absolute path to directory to change the current working directory
+[normal] $ cd .. -> moves to parent of current directory
+[normal] $ cd -> moves to home directory of logged in user
+[Heading 3] File Management (copy, move, delete, rename)
+[normal] $ cp source destination -> copies source content to destination
+[normal] can be used to copy multiple files in a single command by specifying a list of source files separated by space followed by a destination
+[normal] $ cp -v -> shows verbose
+[normal] $ cp -r -> to copy directories
+[normal] $ mv source destination -> moves source content to destination
+[normal] can be used to move multiple files in a single command by specifying a list of source files separated by space followed by a destination
+[normal] $ mv -v -> shows verbose
+[normal] can also be used to rename a single file
+[normal] $ rm file_path -> remove/delete files
+[normal] $ rm -r -> delete directories
+[normal] $ rmdir -> delete empty directories
+[Heading 3] Linux Man Pages
+>>> IMAGE: image6.png
+[normal] $ man x resource -> display manual page of the resource belonging to section x
+[normal] man -k str -> search str across all manual pages and list all findings
+[normal] Navigating through man page
+[normal] Pg up -> Above page
+[normal] Pg down -> next page
+[normal] d -> next half page
+[normal] u -> previous half page
+[normal] Use / to search
+[normal] G -> end of page
+[normal] G -> start of page
+[normal] N-> next finding
+[normal] $ pinfo -> Similar to man pages but list more information regarding the resource
+[normal] $ rpm -qd app -> find documentation of the application of the system
+[normal] $ ssh user@machine -> connect to a remote machine at ip of machine with username “user”
+[normal] If you don’t provide user, ssh will use the name of currently logged in user
+[Heading 3] I/O Redirection
+[normal] > : Output redirect operator
+[normal] ls > test.txt
+[normal] Use >> to append the output to existing file
+[normal] Prepend 1 for output and 2 for for error and & for both
+[normal] < : Input redirect operator
+[normal] Pipe ( | ) -> takes output from previous command and pass to next command
+[normal] $ tee -> read from standard input and write to standard output and files
+[Heading 3] VI Editor
+[normal] Command line text editor for Linux system
+[normal] Three modes
+[normal] Command Mode
+[normal] Can’t type text
+[normal] Executing commands such as copy, paste, del
+[normal] Press i -> to go to insert mode
+[normal] n yy -> to copy n lines
+[normal] dd -> remove the current line
+[normal] Shift+p -> past copied lines
+[normal] cw -> replace current word
+[normal] cc  -> delete content of the line
+[normal] Insert Mode
+[normal] Type text into the file
+[normal] Press Esc to go to command mode
+[normal] Last line mode
+[normal] In command mode, type : to enter in last line mode
+[Heading 3] Archiving Files in Linux
+[normal] $ tar -> archive files in linux
+[normal] $ tar -cvf archive_name list of files -> to archive files
+[normal] $ tar -cvf archive_name name of directory -> archive directories
+[normal] $ tar -zcvf archive_name content -> archive files then compress it
+[normal] $ tar -jcvf archive_name content -> archive files then compress it using bzip2
+[normal] $ tar -tf archive_name -> list all files inside archive
+[normal] $ tar -xvf archive_name -> extract contents of an archive
+[Heading 3] Compressing Files in Linux
+[normal] $ gzip   file -> compress files
+[normal] $ gunzip   file -> uncompress files
+[normal] $ bzip2   file -> compress files
+[normal] $ bunzip2   file -> uncompress files
+[normal] $ xzip   file -> compress files
+[Heading 3] Hard & Soft Links
+[normal] Hard Link
+[normal] A pointer to the Inode of the file
+[normal] $ ln file_path file_link_to_create -> create a hard link for the at the specified path
+[normal] Both link and file have same inode number
+[normal] Any modifications to the hard link also updates the file
+[normal] Deleting original files will not affect the hard links created
+[normal] Hard links can be used as backups
+[normal] Soft Links
+[normal] A pointer to the file
+[normal] $ ln -s file_path file_link_to_create -> create a hard link for the at the specified path
+[normal] Different Inode numbers for link and file
+[normal] Deleting original files will affect the soft links created
+[Heading 3] Finding Files
+[normal] $ locate search_key -> locate any file that contains search key in it name
+[normal] Gives the result from locate database which stores filename and path
+[normal] use -i flag for case-insensitive search e.g. $ locate -i search_key
+[normal] Use -n to limit number of search results e.g.   $ locate -n 3 search_key
+[normal] $ find path search_options  -> search files with specified search option inside the given path
+[normal] -name for case-sensitive search
+[normal] -iname for case-insensitive search
+[normal] -group group_name for files owned by a group
+[normal] -user user_name for files owned by user
+[normal] -uid for files owned by a user
+[normal] -gid for files owned by a group
+[normal] -perm 000 for files with specific permissions
+[normal] -size for files with specific size
+[normal] -mmin -x for files modified within last x minutes
+[normal] -mmin x for files modified x minutes ag
+[normal] -mmin +x for files modifiedbefore last x minutes
+[normal] -type {f|d|l} for searching on basis of file types
+[normal] -links +x for files with hard links  (>= x hard links)
+[normal] -type l searches for soft links
+[normal] -type b searches for all block devices
+[Heading 2] Section 4: Linux System Administration (Chapter 1)
+[Heading 3] Local Users & Local Groups
+[normal] $ id uname -> List group info of a user
+[normal] $ ps -> list running process
+[normal] $ ps au -> list user associated with the processes
+[normal] /etc/passwd
+[normal] Store information about local users in the system
+[normal] Each line contains the information related to a user
+[normal] Each line consists of seven fields separated by a colon (:) from left to right:
+[normal] username
+[normal] Initially password information was stored here but now stored in /etc/shadow file
+[normal] User id
+[normal] User’s primary group ID
+[normal] User’s Name
+[normal] Path to user’s home directory
+[normal] Default Shell for the user (also shows if the user has access to shell or not)
+[normal] /etc/group
+[normal] Store information about local groups in the system
+[normal] Each line contains the information related to a user
+[normal] Each line consists of four fields separated by a colon (:) from left to right:
+[normal] Group name
+[normal] Second field is for password (not used)
+[normal] Group id
+[normal] Users that are members of the group
+[normal] /etc/login.defs
+[normal] Contains default configuration for adding a new user
+[normal] Modify this file to update default configurations of the users created in future
+[normal] Updating this file does not affect the already created users.
+[normal] $ useradd uname -> to create a user in the system
+[normal] $ passwd -> set a password for a user or update existing one
+[normal] $ userdel uname -> remove a user from a system
+[normal] Use -r flag to remove home directory & mail spool
+[normal] $ groupadd name -> add a group with the specified name
+[normal] $ groupdel name -> delete a group with specified name
+[Heading 3] Gaining Root Privileges
+[normal] su or su - -> login as root
+[normal] /etc/sudoers -> sudoers file containing root level permission for not root users
+[normal] $ visudo -> Open sudoers file
+[normal] Sudo -> can be used to run commands with root privileges if you are allowed to run in /ter/sudoers file or added in the wheel/sudo group
+[Heading 3] User Management
+[normal] $ usermod -> update user details in the system
+[normal] -g for changing primary group for user i.e. -g g_name u_name
+[normal] -aG for append user to another group i.e.
+[normal] $  groupmod -> modify an existing group
+[normal] -n for renaming i.e. -n new_name old_name
+[normal] -g for change group id i.e. -g new_id name
+[normal] /etc/shadow
+[normal] Stores users password information
+[normal] Have 9 colon separated fields
+[normal] Username
+[normal] Encrypted Password
+[normal] Days since last password change
+[normal] Minimum number of days before a passwd must be changed
+[normal] Maximum number of days before a passwd must be changed
+[normal] Warning in number of Days before a password expires
+[normal] Number of days account remains active after password expiration
+[normal] Account Expiration Date in number of days
+[normal] Reserved for future use
+[normal] $  chage -> aging information about a user
+[normal] -l  username -> lists the information
+[normal] -d x username -> set number of days after which passwords expires, 0 forces immediate change of password
+[normal] -M x username -> maximum number of days b/w password change
+[normal] -m x username -> minimum number of days b/w password change
+[normal] -E YYYY-MM-DD username -> set expiration date of the user
+[Heading 3] Configure a System to use Existing Auth Service
+[normal] Packages required
+[normal] authconfig-gtk
+[normal] sssd
+[normal] Krb5-workstation
+[normal] Use $ authconfig-gtk to launch the LDAP config
+>>> IMAGE: image4.png
+[normal] Once configured, run $ getent passwd uname to verify successful connection
+[normal] Us su to login as the LDAP user
+[Heading 3] Permission Notations
+[normal] File/Directory permissions are represent as * --- --- --- where * represent the type of file and each group of three - represent permissions for users,group and others. E.g. d rwx r-x r-x represent a directory with read, write, execute permissions for user, & read and execute permissions for  group & others
+[normal] The type bit value can have one of the three values:
+[normal] - for regular files,
+[normal] d for for directory
+[normal] l for link
+[normal] $ chown -> change ownership of files or directories
+[normal] $ chown :newgroup file -> change group of file
+[normal] $ chgrp -> change group of file
+[normal] $ chmod -> chane file permissions
+[normal] Numeric method -> represent permission in form of 3 octal number for user, group and other respectively
+[normal] Symbolic Method -> use symbol to update permissions
+[normal] u for users, g for group, o for others, a for all
+[normal] r for read, w for write, x for execute,
+[normal] use  + to add permissions and - to remove permissions
+[normal] E.g. chmod u+x filename
+[normal] Special Permission
+[normal] Setuid
+[normal] If enabled, let other processes/user run a file with permissions of the owner of the file .e.g. passwd
+[normal] chmod u+s filename -> set setuid  bit
+[normal] Setgid
+[normal] If enabled on directory, all file inside that directory will have group of the directory as group value.
+[normal] Chmod g+s -> set setgid  bit
+[normal] Sticky Bit
+[normal] Prevent deletion of file except from owner/root user
+[normal] Chmod o+t -> set sticky bit
+[normal] Umask
+[normal] Used to set default permissions for new created directories
+[normal] Files will have same permissions as directories excluding the execute permissions
+[normal] Stored in .bashrc file located under home directory
+[normal] Default umask is stored in /etc/profile file
+[Heading 2] Section 5: Linux System Administration (Chapter 2)
+[Heading 3] Monitoring running  processes
+[normal] $ ps -> list running processes
+[normal] Shows process id, terminal, elapsed time, and cmd name
+>>> IMAGE: image1.png
+[normal] $ ps aux -> provides more detailed information consisting of 11 columns
+[normal] USER -> used related to process
+[normal] PID -> Process ID
+[normal] %CPU -> CPU utilization of process in percentage
+[normal] %MEM -> Memory utilization of process in percentage
+[normal] VSZ (Virtual Set Size) -> how much memory a process has available for its execution
+[normal] RSS (Resident Set Size) -> Memory currently used by  a process
+[normal] TTY -> Terminal
+[normal] STAT -> Process State. Represented as a sequence of letters
+[normal] First character indicates the state of the process
+[normal] D -> uninterruptible sleep
+[normal] R-> Running
+[normal] S -> Interruptible sleep
+[normal] Z -> Defunct (Zombie)
+[normal] Second character shows additional information
+[normal] W -> no resident page in memory
+[normal] < -> high priority
+[normal] N -> low priority
+[normal] L -> has pages locked in memory
+[normal] START -> Start time of the process
+[normal] TIME -> How long the process has been running
+[normal] COMMAND -> Name of the process
+[normal] $ ps -ef ->  shows PPID along with other information
+[normal] $ ps lax -> shows Flags (F), Nice Value (NI), Priority (PI) along with other information
+[Heading 3] Running Process in Background
+[normal] To run a process in background, append a & at the end of the command
+[normal] $ jobs -> list background processes
+[normal] $ fg job_number -> bring a  background job to foreground
+[normal] Press Ctrl+z to send a process to background
+[normal] $ bg job_number -> start a background stopped process
+[normal] $ kil %job_number -> terminated a background process
+[Heading 3] Terminate Running Process using kill & pkill
+[normal] $ kill -SIGNAL PID or %JOBID -> using to terminate a running process with a specified signal
+[normal] If you don’t pass any signal, the default (SIGTERM) (15)  is used
+[normal] SIGKILL (9) -> terminates the process immediately without cleanup
+[normal] $ pkill -> kill all the processes realted to a sevice
+[normal] $ uptime -> list uptime, load on processor
+[normal] /proc/cpuinfo  -> contains information related to CPU
+[normal] $ top -> real-time information of memory
+[normal] -d n -> refresh after evrey n seconds
+[Heading 3] Listing unit files Systemctl
+[normal] $ systemctl -> manage services running on the system
+[normal] $ systemctl  -t help list all the units types
+[normal] $ systemctl status service_name -> status of a service
+[normal] enabled service running on boot
+[normal] $ systemctl –type=<type e.g.service> -> list all units of type service
+[normal] $ systemctl is-active <service> -> check whether a service is active or not
+[normal] $ systemctl is-enabled <service> -> check whether a service is enabled or not
+[normal] $ systemctl list-units --type=service -> list all active services
+[normal] $ systemctl list-units --type=service --all -> list all active and inactive services
+[normal] $ systemctl list-unit-files --type=service -> list all unit files along with their status
+[normal] $ systemctl --failed --type=service -> list all failed services along with their status
+[normal] $ systemctl start service_name -> start a stopped service
+[normal] $ systemctl stop service_name -> stop a running service
+[normal] $ systemctl reload service_name -> reload configurations of the service with restarting it
+[normal] $ systemctl enable service_name -> enable service to start on boot
+[normal] $ systemctl disable service_name -> disable service to start on boot
+[normal] $ systemctl mask service_name -> prevent anyone from starting a service
+[normal] $ systemctl unmask service_name -> unmask a service
+[Heading 3] System Log Files
+[normal] /var/log -> contains system log files
+[normal] $ tail -n x filename -> list last x number lines from  the file
+[normal] If n is not specified, 10 lines are displayed
+[normal] $ head -n x filename -> list first x number lines from  the file
+[normal] If n is not specified, 10 lines are displayed
+[normal] lastlog file can’t be read by head, tail or less since it is a binary file
+[normal] To view its content, use $ lastlog command
+[normal] syslog -> protocol responsible for logging events in log files
+[normal] Logfile rotation
+[normal] the logfile is renamed with an appended date of rotation; a new log file is created in which system dumps log; this is done  using logrotate utility
+[normal] System keeps the rotated log files for four weeks; after which they are deleted
+[normal] syslog is handled by two services
+[normal] rsyslog
+[normal] Responsible for collecting data from different parts of the linux system and routing it to an appropriate log file
+[normal] Data can also be routed to another linux server
+[normal] /etc/rsyslog.conf -> main config file for rsyslog service
+[normal] Message Priorities
+[normal] emerg -> System is unusable
+[normal] alert -> action must be taken immediately
+[normal] crit -> Critical Condition
+[normal] err -> error with the service
+[normal] warning -> warning message
+[normal] notice -> attention required
+[normal] info -> Info message
+[normal] debug -> debug info from the service
+[normal] Different type of facilities in Linux
+[normal] auth or authpriv -> message coming from authorization or security related events
+[normal] kern -> kernel message
+[normal] mail -> message from mail subsystem
+[normal] cron -> Chrome Daemon Messages
+[normal] daemon -> daemon messages
+[normal] news -> network subsystem messages
+[normal] lpr -> printing related messages
+[normal] user -> user programs messages
+[normal] Local0 to local7 -> reserved for local use
+[normal] /etc/rsyslod.d/ -> custom config files can be added inside this directory
+[normal] Format priority(* for all, none to for zero).facility /path/to/store/logs
+[normal] $ logger -> can be used to generate log messages
+[normal] SystemD journal  (journald)
+[normal] System service for collecting and storing log data
+[normal] /run/log/jornal/*/system.journal file
+[normal] Clears logs each time you reboot the system
+[normal] $ journalctl ->Displays logfiles in system.journal
+[normal] $ journalctl -n x -> display last x line from journald log file; defaults to 10
+[normal] $ journalctl -p x -> display all messages with priority xfrom journald log file
+[normal] $ journalctl -f  -> similar to tail -n; monitor jornald log file and display updates
+[normal] $ journalctl --since x -> display all messages written since time x
+[normal] $ journalctl --since “YYYY-MM-DD HH:MM:SS” --until “YYYY-MM-DD HH:MM:SS”- -> display all messages written between two date
+[normal] $ journalctl _SYSTEMD_UNIT=x -> display all messages of system unit x
+[normal] Saving System Logs on File System
+[normal] Journald has a built in logrotation that keeps data for a month
+[normal] /etc/systemd/journald.conf -> configuration file for systemd journal
+[normal] Create a directory @ /var/log/journal
+[normal] Change the owner group of the directory to root and systemd-journal respectively
+[normal] Change the directory permissions to 2755
+>>> IMAGE: image3.png
+[normal] Reboot the system
+[Heading 3] Successful shutdown & reboot a system
+[normal] Commands that can be used to reboot the system
+[normal] $ reboot
+[normal] $ shutdown -r
+[normal] $ Init 6
+[normal] $ telinit
+[normal] $ systemctl reboot
+[normal] Command to Shutdown the system
+[normal] $ shutdown
+[normal] Broadcasts a message to all users that the system is going to shutdown
+[normal] $ shutdown -h HH:MM -> schedule system poweroff
+[normal] $ halt
+[normal] $ systemctl halt
+[normal] $ init 0
+[normal] $ telinit 0
+[normal] $ poweroff
+[normal] $ systemctl poweroff
+[Heading 3] Boot into Different Targets
+[normal] /usr/lib/systemd/system
+[normal] Target -> different states that your system can boot into
+[normal] Systemd -> system management daemon
+[normal] Older version use init
+[normal] $ systemctl get-default -> get default target
+[normal] $ systemctl list-dependencies target_name -> list of services dependent on the target
+[normal] $ systemctl isolate target_name -> switch to a different target
+[normal] $ systemctl set-default target_name -> set default target
+[Heading 3] Adjust Process Priority with renice
+[normal] $ nice -n x command -> run a process with a specified nice value x
+[normal] $ renice -n x PID -> change the nice value of a running process with PID
+[Heading 2] Section 6: Linux System Administration (Chapter 3)
+[Heading 3] Linux File System
+[normal] $ df -> display partitions and their usage
+>>> IMAGE: image5.png
+[normal] $ df -h -> display partitions and their usage in readable format
+[normal] tmpfs  -> temporary file system; uses local memory for file system reads and writes
+[normal] $ du -> works similarly like df but run on directories
+[normal] $du -ah -> for extra details and human readable format
+[Heading 3] Mounting File System
+[normal] $ blkid  -> list the UUID of the file systems on the system
+[normal] $ mount /dev/dev_id  /mounting/point ->mount a partition on the specided path
+[normal] $ mount UUID=”UUID of device”  /mounting/point ->mount a partition on the specided path
+[normal] $mount -a -> mount all the file systems listed in /etc/fstab/ file
+[normal] $  umount /mounting/point ->  unmount a device
+[normal] $ lsof /mounting/point -> list processes using the device
+[normal] $ fdisk -l  -> list all the partitions along with their details
+[normal] $ parted -> utility for managing disk and partitions in file system
+[normal] $ fdisk /dev/<dev> -> create partition inside a disk
+[normal] $ mkfs -t <target_file_system> /dev/<dev_id> -> format a a partition with a specific file system
+[normal] $ fsck.<file system> /dev/<dev_id> -> check and repair one or more linux file systems
+[normal] $ dumpe2fs /dev/<dev_id> -> display information about a partition
+[normal] $ xfs_info  /dev/<dev_id> -> list information about xfs file system
+[normal] $ xfs_repair  /dev/<dev_id> -> heck and repair xfs file system
+[Heading 3] CIFS & NFS
+[normal] Both Network File System (NFS) & Common Internet File System (CIFS) are file sharing protocols that allows you to configure a server to be a file sharing system across the network
+[normal] NFS is used to share file system among the Linux Machines.
+[normal] CIFS is used when you want to share a file system among a mix of Linux and Windows Machine
+[normal] NFS
+[normal] Add hostname of your NFS Server in /etc/hosts
+[normal] $ mount -t nfs hostname:/path/to/shared /mounting/point -> Mount an NFS Share
+[normal] To make the mounting boot persistent, add an entry with /etc/fstab  file
+[normal] Hostsname:/path/to/shared /mount/pint nfs4 default  0 0
+[normal] CIFS
+[normal] Add hostname of your NFS Server in /etc/hosts
+[normal] To make the mounting boot persistent, add an entry with /etc/fstab  file
+[normal] //Hostsname/shared /mount/pint cifs rw,user=uname,password=passwd  0 0
+[Heading 3] Logical Volumes
+[normal] Use t in $ fdisk /dev/<dev_id> to change the disk to logical volume.
+[normal] Type L to list all the possible values
+[normal] $ pvcreate /dev/<dev_id> -> to create a physical volume
+[normal] $ pvdisplay -> list physical volumes
+[normal] $ vgcreate name /path/to/partition -> create a volume group
+[normal] $ vgdisplay -> list all the Volume Groups
+[normal] $ lvcreate -n name -L size <volumeGroupName> -> Create a logical volume with specified name and size
+[normal] $ lvdisplay -> list logical volumes
+[normal] $ pvmove /dev/<dev_id>  /dev/<dev_id> -> Move data from one physical volume to other
+[normal] $ vgreduce vg_name /dev/<dev_id> -> remove a volume from a volume group
+[normal] $ lvextend -L 7G /dev/vg_name/data -> extend the logical volume size
+[normal] $ xfs_growfs /mt/pt -> reflect changed size of lv for xfs FS
+[normal] $ resize  / -> reflect changed size of lv forEXT4  FS
+[Heading 3] Access Control List (ACL)
+[normal] Gives you ability to add more flexible permission mechanism for your files system
+[normal] Enabled by default in ext4 & XFS file systems
+[normal] $ getfacl /path -> ACL of the Specified directory/file
+[normal] $ setfacl -m u:uname:permission /path ->  to provide user permissions to a file/directory by updating ACL
+[normal] $ setfacl -m d:u:uname:permission /path ->  to provide user permissions to a directory by updating ACL; also enabling files & directories within to inherit the Updated ACL; only for newly created directories
+[normal] $ setfacl -R -m u:uname:permission /path -> updated the ACL of directory recursively
+[normal] $ setfacl -m g:uname:permission /path ->  update ACL of the groups
+[normal] $ getfacl /path | setfacl --set-file=- filename -> copy ACL of one file to another
+[Heading 3] Network Time Protocol (NTP)
+[normal] NTP synchronizes the time on your system with a centralized NTP server
+[normal] $ timedatectl -> list current time configuration
+[normal] $ timedatectl list-timezones -> list all the time zones
+[normal] $ timedatectl set-timezones <timezone> -> change the timezone of the of your system
+[normal] /etc/ntpd.conf -> config file for ntp
+[normal] $ ntpq -p -> list detailed time synch information
+[normal] $ ntpstat -> list basic time synch information
+[normal] $ ntpupdate host -> Update the NTP server
+[normal] $ chrony
+[normal] synchronize the system clock with NTP servers, reference clocks: (e.g. receiver), and manual input using wristwatch and keyboard. It  can also operate as an NTPv4 (RFC 5905) server and peer to provide a time service to other computers in the network
+[normal] /etc/chrony.conf -> configuration file for chrony
+[normal] Update this file with local NTP servers like allow X.X.X.X
+[normal] $ chronyc source -v -> list NTP servers
+[normal] $ chronyc check -> Check NTP Configuration
+[Heading 3] Network Configuration
+[normal] $ ip addr -> list all the network devices to system
+[normal] $ ip addr show <nic> -> show information about the specified NIC
+[normal] $ ip -s link show <nic> -> show information about the performance of specified NIC
+[normal] $ ip route -> list all the possible routes
+[normal] $ ping host -> check connectivity with  a host
+[normal] $ ping -cx host -> ping a host with x number of packets
+[normal] $ tracepath host -> trace path of the packet as it travels from  source to destination
+[normal] $ traceroute -T host -> trace path of the packet as it travels from  source to destination using TCP
+[normal] /etc/services -> All well known services for standard ports are listed in this file
+[normal] $ ss -ta -> list all the connection on a system; LISTENING
+[normal] $ ss -ta -> list all the connection on a system; LISTENING, also lists port number
+[normal] $ netstat -> similar to ss
+[normal] $ nmcli -> cli utility to configure the network connection on your system
+[normal] $  nmcli con show -> list all available connections on the system
+[normal] $  nmcli con show --active -> list all active connections on the system
+[normal] $  nmcli con show “con_name” -> list all information about the specified connection
+[normal] $  nmcli dev status -> list all network devices along with their status
+[normal] $  nmcli dev show “dev_name” -> list all information about the specified network device
+[normal] $  nmcli con add con-name <name of connection> type ethernet  ifname <device name> -> add a new connection
+[normal] $  nmcli con mod con-name <name of connection> <options> -> modify an existing connection
+[normal] $  nmcli con up -> start an existing connection
+[normal] Editing Network Config Files
+[normal] /etc/sysconfig/network-scripts -> config files for each NIC
+[normal] You can edit hese config files to modify setting for the specific NIC
+[normal] $  nmcli con reload ->  to reload connection confg
+[normal] $  nmcli con del “con_name”->  to delete a connection
+[Heading 3] Configure Hostname and Name Resolution
+[normal] $ hostnamectl -> utility to manage hostname of the system
+[normal] $ hostnamectl set-hostname <hostname> -> change hostname of system
+[normal] /etc/hosts -> contains host to IP mapping for different host; system looks for host IP in this file first; If not found it goes to DNS server
+[Heading 3] Install & Update Software with yum
+[normal] $ yum  -> package manager in Linux
+[normal] $ yum list -> list all the installed packages
+[normal] $ yum list “str”-> list all the installed packages matching a string sequence or regex
+[normal] $ yum search “str”-> search all the available  packages matching a string sequence or regex
+[normal] $ yum info “pkg_name”-> list information about a package
+[normal] $ yum provides /path/to/file -> list packages that configures this specified file
+[normal] $ yum install “pkg_name” -> install a specific package
+[normal] $ yum update  -> update installed system packages
+[normal] $ yum remove “pkg_name” -> remove a specific package
+[normal] $ yum grouplist -> list all yum groups
+[normal] $ yum group info “grp_info” -> list all info about a  yum group
+[normal] $ yum group install “grp_info” -> install all packages inside a yum group
+[normal] $ yum history -> history of actions on packages
+[normal] /var/log/yum.log -> log file of the yum package manager
+[normal] rpm package files -> package manager
+[normal] $ rpm -q “pkg_name” -> display info the package specified
+[normal] $ rpm -q -f /path/to/file -> list packages that configures6 this specified file
+[normal] $ rpm -q -l “pkg_name” -> list all files installed by package
+[normal] $ rpm -q -d “pkg_name” -> path of documentation file for the server
+[normal] $ rpm -ivh  “repo_link” -> install a repo from the provided link
+[Heading 3] Task Scheduler
+[normal] Linux enables you to run specific bash scripts/commands at specific time by use to at and cron
+[normal] $ at <time string to execute commands> -> provide commands and press Ctrl+D to save the scheduled job
+[normal] $ atq -> list all at jobs
+[normal] $ atrm job_num -> remove a job
+[normal] /etc/at.deny -> any username  inside at.deny won’t be allowed to use at command
+[normal] /etc/at.allow -> any username  inside at.deny will be allowed to use at command
+[normal] Both of the above two files are mutually exclusive i,e, only one exist at a time
+[normal] Cron job -> schedule task to run periodically
+[normal] $ crontab -> command used to manage cron jobs
+[normal] /etc/crontab -> stores all the cron jobs
+[normal] $ crontab -e -> open the crontab files
+[normal] A cron jon entry 7 fields separated by space
+[normal] Minutes (0-59)
+[normal] Hour (0-23)
+[normal] Day (1-31)
+[normal] Month (1-12)
+[normal] Day of Week (0-6) Sunday = 0
+[normal] User
+[normal] Command
+[normal] $ crontab -l -> list all cron jobs
+[normal] $ crontab -l -u uname-> list all cron jobs of a user
+[normal] $ crontab -r -u uname->remove all cron jobs of a user
+[normal] /etc/cron.deny -> any username  inside cron.deny won’t be allowed to use at command
+[normal] /etc/cron.allow -> any username  inside cron.allow won’t be allowed to use at command
+[normal] Both of the above two files are mutually exclusive i,e, only one exist at a time
+[normal] /etc/cron.d -> directory for custom cron jobs; any files inside this directory will be read by the cron  and run
+[normal] $ cron  misses the schedule if the system is powered off this limitation is overcome by anacron
+[normal] $anacron -> doesn’t assume that your system is up and running 24/7; it executes job after the downtime
+[normal] Uses timestamps associated with files to see when it was last run and comparing it with its cron entry, it runs the command if necessary
+[normal] $anacron -n -> run all anacron jobs
+[normal] /var/spool/anacron -> anacron stores timestamp in this file to compare for next execution
+[normal] An anacron entry consists of four columns
+[normal] Period In days
+[normal] Delay In Minutes (time after which the command runs, after starting anacron)
+[normal] job-identifier
+[normal] command
+[Heading 2] Section 7: Linux System Administration (Chapter 4)
+[Heading 3] Key based SSH Authentication
+[normal] $ ssh-keygen -> to generate pub/priv key pair
+[normal] $ ssh-copy-id root@remoteServer -> copy the public key to remote server
+[normal] $ ssh root@remoteServer -> connect to remote server
+[Heading 3] Disallow Root User Remote Login
+[normal] /etc/ssh/sshd_config -> Main Configuration File for SSH
+[normal] Update this file with PermitRootLogin parameter set to no to disable root user remote login
+[normal] Update this file with PermitRootLogin parameter set to without-password to allow only ssh key
+[normal] Update this file with PasswordAuthentication parameter set to no to allow only ssh key for non-root users
+[Heading 3] Copying Files Securely between Systems
+[normal] $ scp  /path/to/source /user@IP:/path/to/destination -> copy local files to a remote server
+[normal] $ scp  -r /path/to/source /user@IP:/path/to/destination -> copy local directories to a remote server
+[normal] scp can also copy from remote source to local destination or remote-to-remote
+[normal] $ sftp
+[normal] $ sftp user@host -> establishes an sftp connection to remote machine
+[normal] Prepend L to commands to run on local machine
+[normal] Commands without L will run on the remote server
+[normal] $ put filepath -> upload files to remote server
+[normal] $ get filepath -> download files from remote server
+[Heading 3] Synchronizing Files & Folders Securely between Systems
+[normal] $ rsync -> used to copy files & directories securely between systems
+[normal] similar to scp but copies the changes only
+[normal] $ rsync -av /source /dest -> sync two directories
+[normal] $ rsync -av /source/  /dest/ -> sync the contents of the directories without recreating them
+[Heading 3] Firewalld service
+[normal] $ firewalld -> firewalld service
+[normal] $ firewall-config -> firewall-config (GUI interface for managing firewall)
+[normal] $ firewall-cmd --get-zones -> list available zones inside the firewall
+[normal] Zones
+[normal] gives your more flexibility by adding rules to multiple zones
+[normal] Each zone is takes care of your security in a specific location or situation
+[normal] $ firewall-cmd --get-default-zones -> list default zone of firewall
+[normal] $ firewall-cmd --list-all -> list firewall rules of the default zone
+[normal] $ firewall-cmd --list-all --zone=home -> list firewall rules of the default zone
+[normal] $ firewall-cmd --zone=home --parameter=value -> update the parameters of the specified firewall zone (these changes are not persistent)
+[normal] $ firewall-cmd --zone=home --parameter=value --permanent -> update the parameters of the specified firewall zone (these changes are persistent)
+[normal] $ firewall-cmd --reload -> reload firewall configurations
+[normal] $ firewall-cmd --panic-on -> block all incoming traffic
+[normal] $ firewall-cmd --panic-off -> return to normal state of the firewall
+[normal] $ firewall-cmd --add-service=<serviceName> -> add service to the firewall
+[normal] Use --permanent to make it boot persisten
+[normal] $ elinks protocol://host -> test a service
+[Heading 3] Introduction to SELinux (Security Enhanced Linux)
+[normal] Add/.s another layer of security to the Linux
+[normal] Limits access to files to prevent malicious attacks
+[normal] Can prevent users from executing shell scripts inside their home directories
+[normal] Uses booleans to make its policy more flexible
+[normal] /etc/sysconfig/selinux -> config file for SELinux
+[normal] SELinux operates in three modes
+[normal] Enforcing -> policies enforced
+[normal] Permissive -> prints warnig instead of enforcing
+[normal] Disabled -> No SELinux policy
+[normal] $ sestatus -> get current mode of SELinux
+[normal] $ getenforce -> get current mode of SELinux
+[normal] $ setenforce  mode -> set current mode of SELinux
+[normal] SELinux has  three policies
+[normal] Targeted -> targeted processes are protected
+[normal] Minimum -> Only selected processes are protected
+[normal] mls -> Multi-level security protection
+[normal] Labels
+[normal] Set in context
+[normal] Every process has an associated context type
+[normal] $ semanage fcontext -l -> list all possible contexts
+[normal] Any file created within directory will inherit the context from its parent directory
+[normal] $ restoercon file -> resture default context of file
+[normal] $ semanage context -a -t httpd_system_content_t ‘/mysites(/.*)?’ -> change the context of all files with in  directory
+[normal] $ restoercon -RV /mysites -> apply the updated contex of the files and directories
+[normal] $ semanage context -d ‘/mysites(/.*)?’ ->  delete the context type
+[normal] $ getsebool -a -> get SELinux boolean and their current value
+[normal] $ semanage bool -l  ->get SELinux boolean and their current value with details
+[normal] $ setsebool <boolean_feature> value(on/off) -> enable or disable an SELinux Boolean feature
+[normal] $ setsebool <boolean_feature> value(on/off) -P -> enable or disable an SELinux Boolean feature with persistance
+[normal] /var/log/audit/audit.log -> SE Linux Log Files
+[normal] $ sealert /var/log/audit/audit.log -> View SE linux logs in a more readable format
+[Heading 2] Section 8: Linux System Administration (Chapter 5)
+[Heading 3] Configuring Network Teaming
+[normal] Network teaming provide the following benefits:
+[normal] Network teaming ensures a high level of availability.
+[normal] Multiple connections provide the best performance.
+[normal] In the event of system hardware breakdown, it assures network continuity.
+[normal] It allows traffic to be rerouted across networks
+[normal] Package teamd is used ot configure network teams
+[normal] $ nmcli con add type team con-name team0 ifname team0 config ‘{“runner”: {“name”: “activebackup”}}’ -> create a new masterteam connection
+[normal] $ nmcli con add type team-slave con-name team0-slave0 ifname eth0 master team0 -> create a slave team connection
+[normal] $ teamdctl team0 state ->  current state of connection team
+[normal] $ pin6 -I interface_name IPv6 -> ping an IPv6
+[Heading 3] Firewall (Rich Rules)
+[normal] Helps create complex firewall rules in a more easy to understand manner
+[normal] $ firewall-cmd --add-rich-rule ‘rule family-ipv4 source address=x.x.x.x accept’
+[normal] Create a rich rule
+[normal] You can add --permanent to make the rule persistent
+[normal] More info in -> $ man 5 firewalld.richlanguage
+[Heading 3] Configuring Network Address Translation (NAT)
+[normal] Can be done by Masquerading or Port Forwarding
+[normal] Masquerading
+[normal] Used to forward traffic from internal network to public network through a configured server that acts like a router
+[normal] $ firewall-cmd --permanent --zone=public --add-masquerade -> enable masquerading
+[normal] $ firewall-cmd --permanent --zone=public --remove-masquerade -> disable masquerading
+[normal] Port Forwarding
+[normal] Forwards all traffic, destined to a specific port, to a different port on the local machine/external machine
+[normal] For external Linux Machine, Masquerading needs to enabled before using the port forwarding
+[normal] Command to add port forwarding rule
+>>> IMAGE: image2.png
+[Heading 3] Configuring System as an iSCSI Target
+[normal] iSCSI ->
+[normal] Internet Small Computer Systems Interface
+[normal] Network protocol that allows you put hard disks in a sandbox.
+[normal] Consists of two Components i.e. Target & Client
+[normal] Target
+[normal] $ targetcli -> CLI interface to configure iSCSI target
+[normal] > backstores/block create block1 /dev/sdc -> Create a block storage object
+[normal] > iscsi/ create iqn.2017-03.com.ine:t2 -> create  qualified domain name for the target
+[normal] > cd iscsi/iqn.2017-03.com.ine:t2/tpg1 -> open the block storage object
+[normal] > luns/ create /backstores/block/block1 -> Create Logical Unit Nmbers
+[normal] > acls/ create  iqn.2017-03.com.ine:client -> Create ACL for  client
+[normal] > cd acls/iqn.2017-03.com.ine:client/
+[normal] > set auth userid=lunuser
+[normal] > set auth password=12345
+[normal] Open ports in the firewall for your block storage
+[normal] Start  the target service
+[normal] Client
+[normal] $ iscsi-initiator-utils -> package to configure iSCSI client on system
+[normal] /etc/iscsi/ -> Configuration directory containing config files for iscsi
+[normal] Update iscsid.conf with username and password of the target
+[normal] Add initiatorname.conf containing fqdn of the block storage device
+[normal] $ systemctl start iscsi -> start the iscsi service
+[normal] $ isciadm --mode discovery --type sendtargets --portal X.X.X.X
+[normal] Return fqdn of the iSCSI target
+[normal] $ isciadm --mode node --targetname fqdn_of_iscsitarget --portal X.X.X.X --login
+[normal] Connect to the iSCSI target
+[Heading 3] Kernel Runtime Parameters
+[normal] /proc/sys/kernel -> contains all the kernel related information files
+[normal] $ sysctl -a -> list all system parameters
+[normal] $ sysctl -a | grep kernel -> list all kernel parameters
+[normal] $ sysctl -w kernel.<parameter>=value -> change the value of the kernel parameter
+[normal] $ echo “value” >  /proc/sys/kernel/<parameter> -> change the value of the kernel parameter
+[normal] This method is not boot-persistent. For boot-persistent kernel changes, edit the /etc/sysctl.conf and add a line in the format kernel.<parameter>=value, and save it.
+[Heading 3] System Reports
+[normal] $ iostat -> displays average CPU and the devices on the system
+[normal] $ pidstat -> displays information about the current running processes
+[normal] /etc/sysconfig/sysstat -> configuration file for sysstat
+[normal] /var/log/sa -> directory for log files
+[normal] $ sadf -d /va/log/sa/<filename> -- -u -r -dp -n DEV -> display sysstat files in readable format
+[Heading 2] Section 9: Linux System Administration (Advanced Topics)
+[Heading 3] Installing packages with yum and rpm
+[normal] yum
+[normal] Package manager in the RHEL systems
+[normal] Installs dependencies along with the package
+[normal] $ yum install <package> -> install a package
+[normal] $ yum group install <group_name> -> install a package group
+[normal] To download rpm package files, we need yumdownloader which can be installed by $ yum install yum-utils -y
+[normal] $ yumdownloader <package> -> download rpm package
+[normal] rpm
+[normal] Legacy Package manager in the RHEL systems
+[normal] Doesn’t Installs dependencies along with the package
+[Heading 3] Enable Custom Ports for Services
+[normal] $ yum install setroubleshoot-server selinux-policy-devel -> required packages
+[normal] $ semanage port -l |  grep -w <service_name> -> list all the ports used by the service
+[normal] $ sepolicy -network -p <port> -> Check if a port is used or not
+[normal] $ semanage port -a -t <service> -p tcp <port> -> add custom port for the service
+[normal] $ semanage port -d -t <service> -p tcp <port> -> delete custom port for the service
+[Heading 3] Enable/Disable System Startup Services
+[normal] Refer to this heading

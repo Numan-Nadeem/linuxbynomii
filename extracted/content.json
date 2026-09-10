@@ -1,0 +1,3719 @@
+{
+ "paragraphs": [
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 1: Introduction to Linux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Open Source Operating System that is widely used and provide following features"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Reliable"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Free of Cost (Open-Source)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Software Management"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Security"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Performance"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Freedom"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Customization"
+  },
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 3: Understand & Use of Essential Tools"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Terminal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "The terminal allows the user to perform different system operations using the command line interface. The terminal follows this format: username@machine_name Directory $/#. ~ marks the home directory of logged in users. $ marks non-root user and # marks the root user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ date -> displays current date & time"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ man command -> manual page of a command listing format and acceptable parameters"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ uptime -> shows uptime of the system along with logged in user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ who -> display the details of logged in users"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pwd -> shows current working directory"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Linux File System Hierarchy"
+  },
+  {
+   "type": "image",
+   "images": [
+    "image7.png"
+   ],
+   "style": "normal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/ -> root directory; root of the file system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/usr -> Installed applications on the system, shared libraries"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/usr/bin -> Binary files/Commands used by end users on the linux system (system wide binaries) e.g. cd, mv, etc."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/usr/sbin -> Binary files/ Commands only used by the administrator on the system directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/usr/local -> Path Installed applications"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/usr/tmp"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc -> Contains configuration files of the system and applications"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/var -> Files whose size is expected to increase by time such log files; Continuously changing files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/var/tmp -> same as /tmp but the files gets deleted after 30 days"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/home -> stores home directory of each user; when a user is created, a directory with the username of the user is created inside this directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/root -> home directory of the root user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/tmp -> temporary files used by the system or applications; these files get deleted after 10 days automatically"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/dev -> has all devices files used by system to access the hardware such as hard disk"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/boot -> contains boot loader files and kernels"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/bin -> contains executable files that are part of the core operating system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/usr/share/doc -> documentation of applications on the system"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "File & Directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ touch -> Creates empty files on the path specified"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ touch file.txt -> creates a file with name “file.txt”"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "can also be used to create multiple files in a single by providing space separated path to each file name or comma separated list in side curly brackets ({file1.txt,file2.txt })"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mkdir -> used to create empty directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mkdir test -> creates a directory with name “test”"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "can also be used to create multiple files in a single by providing space separated path to each file name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "use mkdir -p to create nested directories e.g. mkdir -p /dir1/dir2 will create a dir1 and dir2 inside dir1"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Linux Shell Basics"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ whoami -> logged in user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ hostname -> Machine Name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pwd -> current working directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ clear -> clears screen"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ls -> shows files and directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ls -l -> Long Listing Format  (shows more information about the files)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ls -a -> list all files and directories along with hidden files & directores (starting with .)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cd -> move between directories;"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cd /path/to/directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Can use relative or absolute path to directory to change the current working directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cd .. -> moves to parent of current directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cd -> moves to home directory of logged in user"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "File Management (copy, move, delete, rename)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cp source destination -> copies source content to destination"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "can be used to copy multiple files in a single command by specifying a list of source files separated by space followed by a destination"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cp -v -> shows verbose"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cp -r -> to copy directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mv source destination -> moves source content to destination"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "can be used to move multiple files in a single command by specifying a list of source files separated by space followed by a destination"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mv -v -> shows verbose"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "can also be used to rename a single file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rm file_path -> remove/delete files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rm -r -> delete directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rmdir -> delete empty directories"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Linux Man Pages"
+  },
+  {
+   "type": "image",
+   "images": [
+    "image6.png"
+   ],
+   "style": "normal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ man x resource -> display manual page of the resource belonging to section x"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "man -k str -> search str across all manual pages and list all findings"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Navigating through man page"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Pg up -> Above page"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Pg down -> next page"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "d -> next half page"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "u -> previous half page"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Use / to search"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "G -> end of page"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "G -> start of page"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "N-> next finding"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pinfo -> Similar to man pages but list more information regarding the resource"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rpm -qd app -> find documentation of the application of the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ssh user@machine -> connect to a remote machine at ip of machine with username “user”"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "If you don’t provide user, ssh will use the name of currently logged in user"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "I/O Redirection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> : Output redirect operator"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "ls > test.txt"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Use >> to append the output to existing file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Prepend 1 for output and 2 for for error and & for both"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "< : Input redirect operator"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Pipe ( | ) -> takes output from previous command and pass to next command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tee -> read from standard input and write to standard output and files"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "VI Editor"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Command line text editor for Linux system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Three modes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Command Mode"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Can’t type text"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Executing commands such as copy, paste, del"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Press i -> to go to insert mode"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "n yy -> to copy n lines"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "dd -> remove the current line"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Shift+p -> past copied lines"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "cw -> replace current word"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "cc  -> delete content of the line"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Insert Mode"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Type text into the file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Press Esc to go to command mode"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Last line mode"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "In command mode, type : to enter in last line mode"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Archiving Files in Linux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tar -> archive files in linux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tar -cvf archive_name list of files -> to archive files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tar -cvf archive_name name of directory -> archive directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tar -zcvf archive_name content -> archive files then compress it"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tar -jcvf archive_name content -> archive files then compress it using bzip2"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tar -tf archive_name -> list all files inside archive"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tar -xvf archive_name -> extract contents of an archive"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Compressing Files in Linux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ gzip   file -> compress files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ gunzip   file -> uncompress files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ bzip2   file -> compress files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ bunzip2   file -> uncompress files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ xzip   file -> compress files"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Hard & Soft Links"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Hard Link"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "A pointer to the Inode of the file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ln file_path file_link_to_create -> create a hard link for the at the specified path"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Both link and file have same inode number"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Any modifications to the hard link also updates the file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Deleting original files will not affect the hard links created"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Hard links can be used as backups"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Soft Links"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "A pointer to the file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ln -s file_path file_link_to_create -> create a hard link for the at the specified path"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Different Inode numbers for link and file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Deleting original files will affect the soft links created"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Finding Files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ locate search_key -> locate any file that contains search key in it name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Gives the result from locate database which stores filename and path"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "use -i flag for case-insensitive search e.g. $ locate -i search_key"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Use -n to limit number of search results e.g.   $ locate -n 3 search_key"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ find path search_options  -> search files with specified search option inside the given path"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-name for case-sensitive search"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-iname for case-insensitive search"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-group group_name for files owned by a group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-user user_name for files owned by user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-uid for files owned by a user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-gid for files owned by a group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-perm 000 for files with specific permissions"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-size for files with specific size"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-mmin -x for files modified within last x minutes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-mmin x for files modified x minutes ag"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-mmin +x for files modifiedbefore last x minutes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-type {f|d|l} for searching on basis of file types"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-links +x for files with hard links  (>= x hard links)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-type l searches for soft links"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-type b searches for all block devices"
+  },
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 4: Linux System Administration (Chapter 1)"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Local Users & Local Groups"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ id uname -> List group info of a user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ps -> list running process"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ps au -> list user associated with the processes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/passwd"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Store information about local users in the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Each line contains the information related to a user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Each line consists of seven fields separated by a colon (:) from left to right:"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "username"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Initially password information was stored here but now stored in /etc/shadow file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "User id"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "User’s primary group ID"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "User’s Name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Path to user’s home directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Default Shell for the user (also shows if the user has access to shell or not)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Store information about local groups in the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Each line contains the information related to a user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Each line consists of four fields separated by a colon (:) from left to right:"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Group name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Second field is for password (not used)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Group id"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Users that are members of the group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/login.defs"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Contains default configuration for adding a new user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Modify this file to update default configurations of the users created in future"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Updating this file does not affect the already created users."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ useradd uname -> to create a user in the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ passwd -> set a password for a user or update existing one"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ userdel uname -> remove a user from a system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Use -r flag to remove home directory & mail spool"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ groupadd name -> add a group with the specified name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ groupdel name -> delete a group with specified name"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Gaining Root Privileges"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "su or su - -> login as root"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/sudoers -> sudoers file containing root level permission for not root users"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ visudo -> Open sudoers file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Sudo -> can be used to run commands with root privileges if you are allowed to run in /ter/sudoers file or added in the wheel/sudo group"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "User Management"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ usermod -> update user details in the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-g for changing primary group for user i.e. -g g_name u_name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-aG for append user to another group i.e."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  groupmod -> modify an existing group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-n for renaming i.e. -n new_name old_name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-g for change group id i.e. -g new_id name"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/shadow"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Stores users password information"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Have 9 colon separated fields"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Username"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Encrypted Password"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Days since last password change"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Minimum number of days before a passwd must be changed"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Maximum number of days before a passwd must be changed"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Warning in number of Days before a password expires"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Number of days account remains active after password expiration"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Account Expiration Date in number of days"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Reserved for future use"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  chage -> aging information about a user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-l  username -> lists the information"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-d x username -> set number of days after which passwords expires, 0 forces immediate change of password"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-M x username -> maximum number of days b/w password change"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-m x username -> minimum number of days b/w password change"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-E YYYY-MM-DD username -> set expiration date of the user"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Configure a System to use Existing Auth Service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Packages required"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "authconfig-gtk"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "sssd"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Krb5-workstation"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Use $ authconfig-gtk to launch the LDAP config"
+  },
+  {
+   "type": "image",
+   "images": [
+    "image4.png"
+   ],
+   "style": "normal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Once configured, run $ getent passwd uname to verify successful connection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Us su to login as the LDAP user"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Permission Notations"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "File/Directory permissions are represent as * --- --- --- where * represent the type of file and each group of three - represent permissions for users,group and others. E.g. d rwx r-x r-x represent a directory with read, write, execute permissions for user, & read and execute permissions for  group & others"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "The type bit value can have one of the three values:"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "- for regular files,"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "d for for directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "l for link"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ chown -> change ownership of files or directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ chown :newgroup file -> change group of file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ chgrp -> change group of file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ chmod -> chane file permissions"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Numeric method -> represent permission in form of 3 octal number for user, group and other respectively"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Symbolic Method -> use symbol to update permissions"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "u for users, g for group, o for others, a for all"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "r for read, w for write, x for execute,"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "use  + to add permissions and - to remove permissions"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "E.g. chmod u+x filename"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Special Permission"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Setuid"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "If enabled, let other processes/user run a file with permissions of the owner of the file .e.g. passwd"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "chmod u+s filename -> set setuid  bit"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Setgid"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "If enabled on directory, all file inside that directory will have group of the directory as group value."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Chmod g+s -> set setgid  bit"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Sticky Bit"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Prevent deletion of file except from owner/root user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Chmod o+t -> set sticky bit"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Umask"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Used to set default permissions for new created directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Files will have same permissions as directories excluding the execute permissions"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Stored in .bashrc file located under home directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Default umask is stored in /etc/profile file"
+  },
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 5: Linux System Administration (Chapter 2)"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Monitoring running  processes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ps -> list running processes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Shows process id, terminal, elapsed time, and cmd name"
+  },
+  {
+   "type": "image",
+   "images": [
+    "image1.png"
+   ],
+   "style": "normal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ps aux -> provides more detailed information consisting of 11 columns"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "USER -> used related to process"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "PID -> Process ID"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "%CPU -> CPU utilization of process in percentage"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "%MEM -> Memory utilization of process in percentage"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "VSZ (Virtual Set Size) -> how much memory a process has available for its execution"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "RSS (Resident Set Size) -> Memory currently used by  a process"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "TTY -> Terminal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "STAT -> Process State. Represented as a sequence of letters"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "First character indicates the state of the process"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "D -> uninterruptible sleep"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "R-> Running"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "S -> Interruptible sleep"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Z -> Defunct (Zombie)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Second character shows additional information"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "W -> no resident page in memory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "< -> high priority"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "N -> low priority"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "L -> has pages locked in memory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "START -> Start time of the process"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "TIME -> How long the process has been running"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "COMMAND -> Name of the process"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ps -ef ->  shows PPID along with other information"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ps lax -> shows Flags (F), Nice Value (NI), Priority (PI) along with other information"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Running Process in Background"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "To run a process in background, append a & at the end of the command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ jobs -> list background processes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ fg job_number -> bring a  background job to foreground"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Press Ctrl+z to send a process to background"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ bg job_number -> start a background stopped process"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ kil %job_number -> terminated a background process"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Terminate Running Process using kill & pkill"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ kill -SIGNAL PID or %JOBID -> using to terminate a running process with a specified signal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "If you don’t pass any signal, the default (SIGTERM) (15)  is used"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "SIGKILL (9) -> terminates the process immediately without cleanup"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pkill -> kill all the processes realted to a sevice"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ uptime -> list uptime, load on processor"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/proc/cpuinfo  -> contains information related to CPU"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ top -> real-time information of memory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "-d n -> refresh after evrey n seconds"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Listing unit files Systemctl"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl -> manage services running on the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl  -t help list all the units types"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl status service_name -> status of a service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "enabled service running on boot"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl –type=<type e.g.service> -> list all units of type service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl is-active <service> -> check whether a service is active or not"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl is-enabled <service> -> check whether a service is enabled or not"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl list-units --type=service -> list all active services"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl list-units --type=service --all -> list all active and inactive services"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl list-unit-files --type=service -> list all unit files along with their status"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl --failed --type=service -> list all failed services along with their status"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl start service_name -> start a stopped service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl stop service_name -> stop a running service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl reload service_name -> reload configurations of the service with restarting it"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl enable service_name -> enable service to start on boot"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl disable service_name -> disable service to start on boot"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl mask service_name -> prevent anyone from starting a service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl unmask service_name -> unmask a service"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "System Log Files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/var/log -> contains system log files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tail -n x filename -> list last x number lines from  the file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "If n is not specified, 10 lines are displayed"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ head -n x filename -> list first x number lines from  the file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "If n is not specified, 10 lines are displayed"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "lastlog file can’t be read by head, tail or less since it is a binary file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "To view its content, use $ lastlog command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "syslog -> protocol responsible for logging events in log files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Logfile rotation"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "the logfile is renamed with an appended date of rotation; a new log file is created in which system dumps log; this is done  using logrotate utility"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "System keeps the rotated log files for four weeks; after which they are deleted"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "syslog is handled by two services"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "rsyslog"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Responsible for collecting data from different parts of the linux system and routing it to an appropriate log file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Data can also be routed to another linux server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/rsyslog.conf -> main config file for rsyslog service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Message Priorities"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "emerg -> System is unusable"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "alert -> action must be taken immediately"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "crit -> Critical Condition"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "err -> error with the service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "warning -> warning message"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "notice -> attention required"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "info -> Info message"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "debug -> debug info from the service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Different type of facilities in Linux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "auth or authpriv -> message coming from authorization or security related events"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "kern -> kernel message"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "mail -> message from mail subsystem"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "cron -> Chrome Daemon Messages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "daemon -> daemon messages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "news -> network subsystem messages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "lpr -> printing related messages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "user -> user programs messages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Local0 to local7 -> reserved for local use"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/rsyslod.d/ -> custom config files can be added inside this directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Format priority(* for all, none to for zero).facility /path/to/store/logs"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ logger -> can be used to generate log messages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "SystemD journal  (journald)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "System service for collecting and storing log data"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/run/log/jornal/*/system.journal file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Clears logs each time you reboot the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ journalctl ->Displays logfiles in system.journal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ journalctl -n x -> display last x line from journald log file; defaults to 10"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ journalctl -p x -> display all messages with priority xfrom journald log file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ journalctl -f  -> similar to tail -n; monitor jornald log file and display updates"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ journalctl --since x -> display all messages written since time x"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ journalctl --since “YYYY-MM-DD HH:MM:SS” --until “YYYY-MM-DD HH:MM:SS”- -> display all messages written between two date"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ journalctl _SYSTEMD_UNIT=x -> display all messages of system unit x"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Saving System Logs on File System"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Journald has a built in logrotation that keeps data for a month"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/systemd/journald.conf -> configuration file for systemd journal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Create a directory @ /var/log/journal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Change the owner group of the directory to root and systemd-journal respectively"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Change the directory permissions to 2755"
+  },
+  {
+   "type": "image",
+   "images": [
+    "image3.png"
+   ],
+   "style": "normal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Reboot the system"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Successful shutdown & reboot a system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Commands that can be used to reboot the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ reboot"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ shutdown -r"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ Init 6"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ telinit"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl reboot"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Command to Shutdown the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ shutdown"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Broadcasts a message to all users that the system is going to shutdown"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ shutdown -h HH:MM -> schedule system poweroff"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ halt"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl halt"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ init 0"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ telinit 0"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ poweroff"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl poweroff"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Boot into Different Targets"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/usr/lib/systemd/system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Target -> different states that your system can boot into"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Systemd -> system management daemon"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Older version use init"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl get-default -> get default target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl list-dependencies target_name -> list of services dependent on the target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl isolate target_name -> switch to a different target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl set-default target_name -> set default target"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Adjust Process Priority with renice"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ nice -n x command -> run a process with a specified nice value x"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ renice -n x PID -> change the nice value of a running process with PID"
+  },
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 6: Linux System Administration (Chapter 3)"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Linux File System"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ df -> display partitions and their usage"
+  },
+  {
+   "type": "image",
+   "images": [
+    "image5.png"
+   ],
+   "style": "normal"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ df -h -> display partitions and their usage in readable format"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "tmpfs  -> temporary file system; uses local memory for file system reads and writes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ du -> works similarly like df but run on directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$du -ah -> for extra details and human readable format"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Mounting File System"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ blkid  -> list the UUID of the file systems on the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mount /dev/dev_id  /mounting/point ->mount a partition on the specided path"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mount UUID=”UUID of device”  /mounting/point ->mount a partition on the specided path"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$mount -a -> mount all the file systems listed in /etc/fstab/ file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  umount /mounting/point ->  unmount a device"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ lsof /mounting/point -> list processes using the device"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ fdisk -l  -> list all the partitions along with their details"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ parted -> utility for managing disk and partitions in file system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ fdisk /dev/<dev> -> create partition inside a disk"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mkfs -t <target_file_system> /dev/<dev_id> -> format a a partition with a specific file system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ fsck.<file system> /dev/<dev_id> -> check and repair one or more linux file systems"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ dumpe2fs /dev/<dev_id> -> display information about a partition"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ xfs_info  /dev/<dev_id> -> list information about xfs file system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ xfs_repair  /dev/<dev_id> -> heck and repair xfs file system"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "CIFS & NFS"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Both Network File System (NFS) & Common Internet File System (CIFS) are file sharing protocols that allows you to configure a server to be a file sharing system across the network"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "NFS is used to share file system among the Linux Machines."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "CIFS is used when you want to share a file system among a mix of Linux and Windows Machine"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "NFS"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Add hostname of your NFS Server in /etc/hosts"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ mount -t nfs hostname:/path/to/shared /mounting/point -> Mount an NFS Share"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "To make the mounting boot persistent, add an entry with /etc/fstab  file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Hostsname:/path/to/shared /mount/pint nfs4 default  0 0"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "CIFS"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Add hostname of your NFS Server in /etc/hosts"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "To make the mounting boot persistent, add an entry with /etc/fstab  file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "//Hostsname/shared /mount/pint cifs rw,user=uname,password=passwd  0 0"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Logical Volumes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Use t in $ fdisk /dev/<dev_id> to change the disk to logical volume."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Type L to list all the possible values"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pvcreate /dev/<dev_id> -> to create a physical volume"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pvdisplay -> list physical volumes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ vgcreate name /path/to/partition -> create a volume group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ vgdisplay -> list all the Volume Groups"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ lvcreate -n name -L size <volumeGroupName> -> Create a logical volume with specified name and size"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ lvdisplay -> list logical volumes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pvmove /dev/<dev_id>  /dev/<dev_id> -> Move data from one physical volume to other"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ vgreduce vg_name /dev/<dev_id> -> remove a volume from a volume group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ lvextend -L 7G /dev/vg_name/data -> extend the logical volume size"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ xfs_growfs /mt/pt -> reflect changed size of lv for xfs FS"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ resize  / -> reflect changed size of lv forEXT4  FS"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Access Control List (ACL)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Gives you ability to add more flexible permission mechanism for your files system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Enabled by default in ext4 & XFS file systems"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ getfacl /path -> ACL of the Specified directory/file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ setfacl -m u:uname:permission /path ->  to provide user permissions to a file/directory by updating ACL"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ setfacl -m d:u:uname:permission /path ->  to provide user permissions to a directory by updating ACL; also enabling files & directories within to inherit the Updated ACL; only for newly created directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ setfacl -R -m u:uname:permission /path -> updated the ACL of directory recursively"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ setfacl -m g:uname:permission /path ->  update ACL of the groups"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ getfacl /path | setfacl --set-file=- filename -> copy ACL of one file to another"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Network Time Protocol (NTP)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "NTP synchronizes the time on your system with a centralized NTP server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ timedatectl -> list current time configuration"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ timedatectl list-timezones -> list all the time zones"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ timedatectl set-timezones <timezone> -> change the timezone of the of your system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/ntpd.conf -> config file for ntp"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ntpq -p -> list detailed time synch information"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ntpstat -> list basic time synch information"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ntpupdate host -> Update the NTP server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ chrony"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "synchronize the system clock with NTP servers, reference clocks: (e.g. receiver), and manual input using wristwatch and keyboard. It  can also operate as an NTPv4 (RFC 5905) server and peer to provide a time service to other computers in the network"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/chrony.conf -> configuration file for chrony"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Update this file with local NTP servers like allow X.X.X.X"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ chronyc source -v -> list NTP servers"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ chronyc check -> Check NTP Configuration"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Network Configuration"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ip addr -> list all the network devices to system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ip addr show <nic> -> show information about the specified NIC"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ip -s link show <nic> -> show information about the performance of specified NIC"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ip route -> list all the possible routes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ping host -> check connectivity with  a host"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ping -cx host -> ping a host with x number of packets"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ tracepath host -> trace path of the packet as it travels from  source to destination"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ traceroute -T host -> trace path of the packet as it travels from  source to destination using TCP"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/services -> All well known services for standard ports are listed in this file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ss -ta -> list all the connection on a system; LISTENING"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ss -ta -> list all the connection on a system; LISTENING, also lists port number"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ netstat -> similar to ss"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ nmcli -> cli utility to configure the network connection on your system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con show -> list all available connections on the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con show --active -> list all active connections on the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con show “con_name” -> list all information about the specified connection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli dev status -> list all network devices along with their status"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli dev show “dev_name” -> list all information about the specified network device"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con add con-name <name of connection> type ethernet  ifname <device name> -> add a new connection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con mod con-name <name of connection> <options> -> modify an existing connection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con up -> start an existing connection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Editing Network Config Files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/sysconfig/network-scripts -> config files for each NIC"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "You can edit hese config files to modify setting for the specific NIC"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con reload ->  to reload connection confg"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$  nmcli con del “con_name”->  to delete a connection"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Configure Hostname and Name Resolution"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ hostnamectl -> utility to manage hostname of the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ hostnamectl set-hostname <hostname> -> change hostname of system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/hosts -> contains host to IP mapping for different host; system looks for host IP in this file first; If not found it goes to DNS server"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Install & Update Software with yum"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum  -> package manager in Linux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum list -> list all the installed packages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum list “str”-> list all the installed packages matching a string sequence or regex"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum search “str”-> search all the available  packages matching a string sequence or regex"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum info “pkg_name”-> list information about a package"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum provides /path/to/file -> list packages that configures this specified file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum install “pkg_name” -> install a specific package"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum update  -> update installed system packages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum remove “pkg_name” -> remove a specific package"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum grouplist -> list all yum groups"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum group info “grp_info” -> list all info about a  yum group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum group install “grp_info” -> install all packages inside a yum group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum history -> history of actions on packages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/var/log/yum.log -> log file of the yum package manager"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "rpm package files -> package manager"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rpm -q “pkg_name” -> display info the package specified"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rpm -q -f /path/to/file -> list packages that configures6 this specified file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rpm -q -l “pkg_name” -> list all files installed by package"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rpm -q -d “pkg_name” -> path of documentation file for the server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rpm -ivh  “repo_link” -> install a repo from the provided link"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Task Scheduler"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Linux enables you to run specific bash scripts/commands at specific time by use to at and cron"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ at <time string to execute commands> -> provide commands and press Ctrl+D to save the scheduled job"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ atq -> list all at jobs"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ atrm job_num -> remove a job"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/at.deny -> any username  inside at.deny won’t be allowed to use at command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/at.allow -> any username  inside at.deny will be allowed to use at command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Both of the above two files are mutually exclusive i,e, only one exist at a time"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Cron job -> schedule task to run periodically"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ crontab -> command used to manage cron jobs"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/crontab -> stores all the cron jobs"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ crontab -e -> open the crontab files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "A cron jon entry 7 fields separated by space"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Minutes (0-59)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Hour (0-23)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Day (1-31)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Month (1-12)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Day of Week (0-6) Sunday = 0"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "User"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ crontab -l -> list all cron jobs"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ crontab -l -u uname-> list all cron jobs of a user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ crontab -r -u uname->remove all cron jobs of a user"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/cron.deny -> any username  inside cron.deny won’t be allowed to use at command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/cron.allow -> any username  inside cron.allow won’t be allowed to use at command"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Both of the above two files are mutually exclusive i,e, only one exist at a time"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/cron.d -> directory for custom cron jobs; any files inside this directory will be read by the cron  and run"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ cron  misses the schedule if the system is powered off this limitation is overcome by anacron"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$anacron -> doesn’t assume that your system is up and running 24/7; it executes job after the downtime"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Uses timestamps associated with files to see when it was last run and comparing it with its cron entry, it runs the command if necessary"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$anacron -n -> run all anacron jobs"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/var/spool/anacron -> anacron stores timestamp in this file to compare for next execution"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "An anacron entry consists of four columns"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Period In days"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Delay In Minutes (time after which the command runs, after starting anacron)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "job-identifier"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "command"
+  },
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 7: Linux System Administration (Chapter 4)"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Key based SSH Authentication"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ssh-keygen -> to generate pub/priv key pair"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ssh-copy-id root@remoteServer -> copy the public key to remote server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ ssh root@remoteServer -> connect to remote server"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Disallow Root User Remote Login"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/ssh/sshd_config -> Main Configuration File for SSH"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Update this file with PermitRootLogin parameter set to no to disable root user remote login"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Update this file with PermitRootLogin parameter set to without-password to allow only ssh key"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Update this file with PasswordAuthentication parameter set to no to allow only ssh key for non-root users"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Copying Files Securely between Systems"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ scp  /path/to/source /user@IP:/path/to/destination -> copy local files to a remote server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ scp  -r /path/to/source /user@IP:/path/to/destination -> copy local directories to a remote server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "scp can also copy from remote source to local destination or remote-to-remote"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sftp"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sftp user@host -> establishes an sftp connection to remote machine"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Prepend L to commands to run on local machine"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Commands without L will run on the remote server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ put filepath -> upload files to remote server"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ get filepath -> download files from remote server"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Synchronizing Files & Folders Securely between Systems"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rsync -> used to copy files & directories securely between systems"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "similar to scp but copies the changes only"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rsync -av /source /dest -> sync two directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ rsync -av /source/  /dest/ -> sync the contents of the directories without recreating them"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Firewalld service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewalld -> firewalld service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-config -> firewall-config (GUI interface for managing firewall)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --get-zones -> list available zones inside the firewall"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Zones"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "gives your more flexibility by adding rules to multiple zones"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Each zone is takes care of your security in a specific location or situation"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --get-default-zones -> list default zone of firewall"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --list-all -> list firewall rules of the default zone"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --list-all --zone=home -> list firewall rules of the default zone"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --zone=home --parameter=value -> update the parameters of the specified firewall zone (these changes are not persistent)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --zone=home --parameter=value --permanent -> update the parameters of the specified firewall zone (these changes are persistent)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --reload -> reload firewall configurations"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --panic-on -> block all incoming traffic"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --panic-off -> return to normal state of the firewall"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --add-service=<serviceName> -> add service to the firewall"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Use --permanent to make it boot persisten"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ elinks protocol://host -> test a service"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Introduction to SELinux (Security Enhanced Linux)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Add/.s another layer of security to the Linux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Limits access to files to prevent malicious attacks"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Can prevent users from executing shell scripts inside their home directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Uses booleans to make its policy more flexible"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/sysconfig/selinux -> config file for SELinux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "SELinux operates in three modes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Enforcing -> policies enforced"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Permissive -> prints warnig instead of enforcing"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Disabled -> No SELinux policy"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sestatus -> get current mode of SELinux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ getenforce -> get current mode of SELinux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ setenforce  mode -> set current mode of SELinux"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "SELinux has  three policies"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Targeted -> targeted processes are protected"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Minimum -> Only selected processes are protected"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "mls -> Multi-level security protection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Labels"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Set in context"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Every process has an associated context type"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ semanage fcontext -l -> list all possible contexts"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Any file created within directory will inherit the context from its parent directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ restoercon file -> resture default context of file"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ semanage context -a -t httpd_system_content_t ‘/mysites(/.*)?’ -> change the context of all files with in  directory"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ restoercon -RV /mysites -> apply the updated contex of the files and directories"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ semanage context -d ‘/mysites(/.*)?’ ->  delete the context type"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ getsebool -a -> get SELinux boolean and their current value"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ semanage bool -l  ->get SELinux boolean and their current value with details"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ setsebool <boolean_feature> value(on/off) -> enable or disable an SELinux Boolean feature"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ setsebool <boolean_feature> value(on/off) -P -> enable or disable an SELinux Boolean feature with persistance"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/var/log/audit/audit.log -> SE Linux Log Files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sealert /var/log/audit/audit.log -> View SE linux logs in a more readable format"
+  },
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 8: Linux System Administration (Chapter 5)"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Configuring Network Teaming"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Network teaming provide the following benefits:"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Network teaming ensures a high level of availability."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Multiple connections provide the best performance."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "In the event of system hardware breakdown, it assures network continuity."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "It allows traffic to be rerouted across networks"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Package teamd is used ot configure network teams"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ nmcli con add type team con-name team0 ifname team0 config ‘{“runner”: {“name”: “activebackup”}}’ -> create a new masterteam connection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ nmcli con add type team-slave con-name team0-slave0 ifname eth0 master team0 -> create a slave team connection"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ teamdctl team0 state ->  current state of connection team"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pin6 -I interface_name IPv6 -> ping an IPv6"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Firewall (Rich Rules)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Helps create complex firewall rules in a more easy to understand manner"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --add-rich-rule ‘rule family-ipv4 source address=x.x.x.x accept’"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Create a rich rule"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "You can add --permanent to make the rule persistent"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "More info in -> $ man 5 firewalld.richlanguage"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Configuring Network Address Translation (NAT)"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Can be done by Masquerading or Port Forwarding"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Masquerading"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Used to forward traffic from internal network to public network through a configured server that acts like a router"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --permanent --zone=public --add-masquerade -> enable masquerading"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ firewall-cmd --permanent --zone=public --remove-masquerade -> disable masquerading"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Port Forwarding"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Forwards all traffic, destined to a specific port, to a different port on the local machine/external machine"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "For external Linux Machine, Masquerading needs to enabled before using the port forwarding"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Command to add port forwarding rule"
+  },
+  {
+   "type": "image",
+   "images": [
+    "image2.png"
+   ],
+   "style": "normal"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Configuring System as an iSCSI Target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "iSCSI ->"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Internet Small Computer Systems Interface"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Network protocol that allows you put hard disks in a sandbox."
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Consists of two Components i.e. Target & Client"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ targetcli -> CLI interface to configure iSCSI target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> backstores/block create block1 /dev/sdc -> Create a block storage object"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> iscsi/ create iqn.2017-03.com.ine:t2 -> create  qualified domain name for the target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> cd iscsi/iqn.2017-03.com.ine:t2/tpg1 -> open the block storage object"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> luns/ create /backstores/block/block1 -> Create Logical Unit Nmbers"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> acls/ create  iqn.2017-03.com.ine:client -> Create ACL for  client"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> cd acls/iqn.2017-03.com.ine:client/"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> set auth userid=lunuser"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "> set auth password=12345"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Open ports in the firewall for your block storage"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Start  the target service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Client"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ iscsi-initiator-utils -> package to configure iSCSI client on system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/iscsi/ -> Configuration directory containing config files for iscsi"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Update iscsid.conf with username and password of the target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Add initiatorname.conf containing fqdn of the block storage device"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ systemctl start iscsi -> start the iscsi service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ isciadm --mode discovery --type sendtargets --portal X.X.X.X"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Return fqdn of the iSCSI target"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ isciadm --mode node --targetname fqdn_of_iscsitarget --portal X.X.X.X --login"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Connect to the iSCSI target"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Kernel Runtime Parameters"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/proc/sys/kernel -> contains all the kernel related information files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sysctl -a -> list all system parameters"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sysctl -a | grep kernel -> list all kernel parameters"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sysctl -w kernel.<parameter>=value -> change the value of the kernel parameter"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ echo “value” >  /proc/sys/kernel/<parameter> -> change the value of the kernel parameter"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "This method is not boot-persistent. For boot-persistent kernel changes, edit the /etc/sysctl.conf and add a line in the format kernel.<parameter>=value, and save it."
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "System Reports"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ iostat -> displays average CPU and the devices on the system"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ pidstat -> displays information about the current running processes"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/etc/sysconfig/sysstat -> configuration file for sysstat"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "/var/log/sa -> directory for log files"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sadf -d /va/log/sa/<filename> -- -u -r -dp -n DEV -> display sysstat files in readable format"
+  },
+  {
+   "type": "text",
+   "style": "Heading 2",
+   "text": "Section 9: Linux System Administration (Advanced Topics)"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Installing packages with yum and rpm"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "yum"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Package manager in the RHEL systems"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Installs dependencies along with the package"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum install <package> -> install a package"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum group install <group_name> -> install a package group"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "To download rpm package files, we need yumdownloader which can be installed by $ yum install yum-utils -y"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yumdownloader <package> -> download rpm package"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "rpm"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Legacy Package manager in the RHEL systems"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Doesn’t Installs dependencies along with the package"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Enable Custom Ports for Services"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ yum install setroubleshoot-server selinux-policy-devel -> required packages"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ semanage port -l |  grep -w <service_name> -> list all the ports used by the service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ sepolicy -network -p <port> -> Check if a port is used or not"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ semanage port -a -t <service> -p tcp <port> -> add custom port for the service"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "$ semanage port -d -t <service> -p tcp <port> -> delete custom port for the service"
+  },
+  {
+   "type": "text",
+   "style": "Heading 3",
+   "text": "Enable/Disable System Startup Services"
+  },
+  {
+   "type": "text",
+   "style": "normal",
+   "text": "Refer to this heading"
+  }
+ ],
+ "tables": []
+}
