@@ -313,6 +313,103 @@
   background: var(--hazard);
 }
 
+/* == BUILDER BYLINE - glitch link, fully inert until hover/focus == */
+.glitch-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.glitch-link::before,
+.glitch-link::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.95em;
+  opacity: 0; /* still when idle - nothing renders, nothing moves */
+  pointer-events: none;
+  background: var(--tv);
+  overflow: hidden;
+}
+.glitch-link:hover::before,
+.glitch-link:focus-visible::before {
+  opacity: 0.9;
+  color: var(--phos);
+  animation: glitch-slice-a 0.6s steps(1, end) infinite;
+}
+.glitch-link:hover::after,
+.glitch-link:focus-visible::after {
+  opacity: 0.9;
+  color: var(--hazard);
+  animation: glitch-slice-b 0.6s steps(1, end) infinite;
+}
+.glitch-link .byline-rule {
+  display: block;
+  height: 2px;
+  margin-top: 0.14em;
+  background: var(--hazard);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease-out;
+}
+.glitch-link:hover .byline-rule,
+.glitch-link:focus-visible .byline-rule {
+  transform: scaleX(1);
+}
+@keyframes glitch-slice-a {
+  0% {
+    transform: translate(-2px, -1px);
+    clip-path: inset(0 0 64% 0);
+  }
+  20% {
+    transform: translate(2px, 1px);
+    clip-path: inset(42% 0 28% 0);
+  }
+  40% {
+    transform: translate(-3px, 0);
+    clip-path: inset(72% 0 4% 0);
+  }
+  60% {
+    transform: translate(1px, 1px);
+    clip-path: inset(14% 0 60% 0);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+    clip-path: inset(52% 0 18% 0);
+  }
+  100% {
+    transform: translate(2px, 0);
+    clip-path: inset(30% 0 44% 0);
+  }
+}
+@keyframes glitch-slice-b {
+  0% {
+    transform: translate(2px, 1px);
+    clip-path: inset(64% 0 0 0);
+  }
+  20% {
+    transform: translate(-2px, -1px);
+    clip-path: inset(24% 0 52% 0);
+  }
+  40% {
+    transform: translate(3px, 0);
+    clip-path: inset(0 0 70% 0);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+    clip-path: inset(56% 0 14% 0);
+  }
+  80% {
+    transform: translate(1px, 1px);
+    clip-path: inset(8% 0 66% 0);
+  }
+  100% {
+    transform: translate(-2px, 0);
+    clip-path: inset(38% 0 30% 0);
+  }
+}
+
 /* reduced motion respect */
 @media (prefers-reduced-motion: reduce) {
   .ticker-track {
@@ -323,5 +420,13 @@
   }
   .cursor-blink::after {
     animation: none;
+  }
+  .glitch-link::before,
+  .glitch-link::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  .glitch-link .byline-rule {
+    transition: none;
   }
 }

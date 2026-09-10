@@ -1,5 +1,7 @@
 "use client";
 
+import { Byline } from "./byline";
+
 export function Footer() {
   return (
     <footer className="mt-auto border-t-8 border-hazard bg-tv" aria-label="Document footer">
@@ -38,6 +40,16 @@ export function Footer() {
             <span className="hover:text-hazard transition-colors">™</span>
           </div>
           <span className="micro text-phos-faint">{"///"} 51.5072°N 0.1276°W</span>
+        </div>
+
+        {/* builder signature - final stamp, still until hovered */}
+        <div className="mt-8 flex flex-col items-center gap-3 border-t border-line pt-7 text-center">
+          <div aria-hidden className="barcode h-4 w-48 opacity-80" />
+          <p className="micro text-phos-faint">{"///"} BUILT BY</p>
+          <Byline />
+          <p className="micro text-phos-faint">
+            WWW.NUMANNADEEM.DEV — EXTERNAL NODE ↗
+          </p>
         </div>
       </div>
     </footer>

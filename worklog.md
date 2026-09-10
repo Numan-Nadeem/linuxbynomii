@@ -25,3 +25,19 @@ Stage Summary:
 - Deliverable: single-page Next.js app at `/` — "LINUX_SYSADMIN://FIELD_NOTES" tactical telemetry notes site.
 - All docx content transcribed (8 sections, 51 modules, 302 commands, 7 evidence plates embedded).
 - Key artifacts: src/data/course*.ts, src/components/notes/*, src/app/{page,layout,globals.css}, public/media/*.
+
+---
+Task ID: 2
+Agent: Super Z (main agent)
+Task: Add "BUILT BY Numan Nadeem" signature at the end of the site, linking to www.numannadeem.dev, with a theme-related hover animation on "numannadeem" that is still when idle.
+
+Work Log:
+- Created `src/components/notes/byline.tsx` - client component; JS decode-scramble (~430ms, 26 frames, glyph charset) fires only on mouseenter/focus; instantly freezes back to the true label on mouseleave/blur; respects prefers-reduced-motion (skips scramble); aria-label keeps screen readers on the real name during scramble.
+- Appended signature block at the very end of `src/components/notes/footer.tsx`: barcode strip + "/// BUILT BY" micro label + Byline link (font-macro, hazard red) + "WWW.NUMANNADEEM.DEV - EXTERNAL NODE" line.
+- Added `.glitch-link` system to `globals.css` (ASCII-only comments): ::before/::after slices (white phosphor + hazard red) use attr(data-text) and stay opacity:0/animation:none until hover/focus; two clip-path slice keyframes (glitch-slice-a/b) run only while hovered; 2px red underline draws in via scaleX transform; prefers-reduced-motion disables everything.
+- Verification via agent-browser: link href/target confirmed; idle state = animation none, slice opacity 0, rule scaleX(0) (fully still); real-mouse hover = scramble text captured mid-decode ("N<}]< _%?0-"), both slice animations running, rule scaleX(1); mouse leave = text restored, all motion stopped; mobile 390px centered layout OK; console clean; lint clean; dev.log 200s only.
+
+Stage Summary:
+- Footer now ends with the builder stamp: "/// BUILT BY NUMAN NADEEM" -> https://www.numannadeem.dev (new tab).
+- Hover-only tactical decode + RGB-split glitch; completely static when not hovered.
+- Artifacts: src/components/notes/byline.tsx (new), footer.tsx, src/app/globals.css.
