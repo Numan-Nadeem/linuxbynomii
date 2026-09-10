@@ -60,3 +60,18 @@ Stage Summary:
 - Site is now a documentation-style viewer: sidebar/chips navigate one section per page, prev/next pager at each page bottom, shareable #hash deep links, grep = full-dossier search results.
 - All industrial-telemetry styling (CRT tokens, macro/micro type, hairline grids, textures, footer byline) unchanged.
 - Artifacts: notes-app.tsx (rewritten), pager.tsx (new), hero.tsx (one line), globals.css (grid-compartment track fix).
+
+---
+Task ID: 4
+Agent: Super Z (main agent)
+Task: Add pointer cursor to the prev/next pager buttons.
+
+Work Log:
+- Added `cursor-pointer` utility to both pager buttons in `src/components/notes/pager.tsx`.
+- Extended to the whole UI for consistency: Tailwind v4 preflight resets buttons to cursor:default, so appended an unlayered global rule at the end of `src/app/globals.css`: `button:not(:disabled), a[href], [role="button"]:not(:disabled) { cursor: pointer; }` (unlayered so it outranks the layered preflight reset; first attempt inside @layer base lost the cascade).
+- Debugging note: the rule initially seemed "dropped" - turned out the Turbopack dev watcher served a stale globals.css chunk; verified with a temporary probe rule that a content mutation forces a rebuild. Probe removed afterwards; disk + served CSS verified clean.
+- Verified via agent-browser: pager prev/next, rail section + topic buttons, command copy rows, logo link, footer byline link all compute cursor:pointer; page renders normally; no horizontal overflow; lint clean.
+
+Stage Summary:
+- All clickable elements across the site now show the pointer cursor; styling otherwise untouched.
+- Artifacts: pager.tsx (cursor-pointer), globals.css (unlayered global pointer rule).

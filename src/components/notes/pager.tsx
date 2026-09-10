@@ -32,7 +32,7 @@ export function SectionPager({
         <button
           type="button"
           onClick={() => onNavigate(prev.id)}
-          className="group flex flex-col items-start gap-1.5 bg-tv px-4 md:px-8 py-5 md:py-6 text-left transition-colors hover:bg-hazard focus-visible:bg-hazard"
+          className="group flex cursor-pointer flex-col items-start gap-1.5 bg-tv px-4 md:px-8 py-5 md:py-6 text-left transition-colors hover:bg-hazard focus-visible:bg-hazard"
         >
           <span className="micro text-phos-faint group-hover:text-white transition-colors">
             {"<<<"} PREV — {idx === 0 ? "BRIEFING" : `SECTION ${prev.num}`}
@@ -55,7 +55,7 @@ export function SectionPager({
         <button
           type="button"
           onClick={() => onNavigate(next.id)}
-          className="group flex flex-col items-end gap-1.5 bg-tv px-4 md:px-8 py-5 md:py-6 text-right border-t sm:border-t-0 border-line transition-colors hover:bg-hazard focus-visible:bg-hazard"
+          className="group flex cursor-pointer flex-col items-end gap-1.5 bg-tv px-4 md:px-8 py-5 md:py-6 text-right border-t sm:border-t-0 border-line transition-colors hover:bg-hazard focus-visible:bg-hazard"
         >
           <span className="micro text-phos-faint group-hover:text-white transition-colors">
             {idx === -1 ? "BEGIN DOSSIER" : `NEXT — SECTION ${next.num}`} {">>>"}

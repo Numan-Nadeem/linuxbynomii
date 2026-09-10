@@ -433,3 +433,10 @@
     transition: none;
   }
 }
+
+/* clickable = pointer, site-wide (unlayered: outranks preflight reset) */
+button:not(:disabled),
+a[href],
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}
