@@ -73,7 +73,7 @@ export function Hero({ stats }: { stats: CourseStats }) {
             <p><span className="text-phos-faint">[ OK ]</span> Loaded {stats.topics} modules.</p>
             <p><span className="text-phos-faint">[ OK ]</span> Buffered {stats.commands} commands.</p>
             <p><span className="text-phos-faint">[ OK ]</span> Attached {stats.figures} evidence plates.</p>
-            <p className="text-hazard hazard-glow">&gt; READY. SCROLL TO OPERATE_</p>
+            <p className="text-hazard hazard-glow">&gt; READY. SELECT SECTION_</p>
           </div>
           <div className="grid grid-cols-2 gap-px bg-line border-t border-line">
             {[

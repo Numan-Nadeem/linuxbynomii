@@ -41,3 +41,22 @@ Stage Summary:
 - Footer now ends with the builder stamp: "/// BUILT BY NUMAN NADEEM" -> https://www.numannadeem.dev (new tab).
 - Hover-only tactical decode + RGB-split glitch; completely static when not hovered.
 - Artifacts: src/components/notes/byline.tsx (new), footer.tsx, src/app/globals.css.
+
+---
+Task ID: 3
+Agent: Super Z (main agent)
+Task: Convert the viewing experience to a documentation-website layout (per-section viewing) without changing the visual styling, and fix broken mobile responsiveness.
+
+Work Log:
+- Refactored `src/components/notes/notes-app.tsx` to a docs shell: browse mode renders ONE view at a time (briefing hero | single SectionBlock); hash-synced navigation via history.pushState + hashchange/popstate handlers (deep links work for sections #sec-03 and topics #t-07-nat, browser back/forward restores views); instant scroll-to-top on page swap; deferred topic jump via pendingTopicRef (ref instead of setState-in-effect after lint error react-hooks/set-state-in-effect).
+- Search mode preserved: non-empty grep query switches to a stacked results view (all matching sections, results strip with hit counts, hero hidden); CLR returns to the previously active section.
+- Created `src/components/notes/pager.tsx` - prev/next docs pagination (border-t-2, gap-px grid, hazard hover). Briefing shows "BEGIN DOSSIER >>>"; sections show "<<< PREV / NEXT >>>"; last section shows "END OF DOSSIER /// TRANSMISSION COMPLETE". Mobile stacks to one column.
+- Hero boot log line updated to "> READY. SELECT SECTION_" to match click-based nav (text only).
+- Fixed [ TOP ] button overlapping footer signature on mobile: IntersectionObserver on footer hides the fixed button while footer is in view (verified true mid-page / false at footer).
+- Fixed horizontal overflow on mobile (root cause: grid-compartment auto track sized to content - evidence plates fig 493px+ and def rows blew out to 553-697px at 390vw): `.grid-compartment` now uses `grid-template-columns: minmax(0, 1fr)`, children get min-width: 0, `.plate img` gets max-width: 100%. Verified scrollWidth == 390 on briefing + all 8 sections + search mode.
+- Browser verification: BEGIN/NEXT/prev pager clicks swap sections + update hash; rail section + topic clicks work (topic lands 112px below sticky bar); back/forward history verified (sec-02 <-> sec-05); grep selinux = 13 hits/3 sections stacked; CLR restores sec-07; desktop pager 2-col, figure 924px full-width; mobile screenshots (brief, sec head, figure, pager, footer) all clean; zero console errors; lint clean.
+
+Stage Summary:
+- Site is now a documentation-style viewer: sidebar/chips navigate one section per page, prev/next pager at each page bottom, shareable #hash deep links, grep = full-dossier search results.
+- All industrial-telemetry styling (CRT tokens, macro/micro type, hairline grids, textures, footer byline) unchanged.
+- Artifacts: notes-app.tsx (rewritten), pager.tsx (new), hero.tsx (one line), globals.css (grid-compartment track fix).
